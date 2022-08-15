@@ -1,0 +1,33 @@
+ .todo-input {
+  padding: 10px;
+  height: 68px;
+  width: 400px;
+  border: none;
+}
+.todo-input:focus{
+  outline: none;
+  color: black;
+}
+ input {
+  color: #cecece;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: white;
+  width: 80%;
+} 
+
+.input{
+  border: 1px solid #cecece;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+  width: 579px;
+  display: flex;
+  justify-content: space-between;
+  /* position: relative;
+  bottom: 140px;
+  left: 170px; */
+}
+
