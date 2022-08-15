@@ -1,5 +1,4 @@
 import { Todo } from "../Todo/Todo";
-
 export const TodoList = ({ todos, setTodos, clearTodos }) => {
   const count = {
     width: "579px",
@@ -10,7 +9,7 @@ export const TodoList = ({ todos, setTodos, clearTodos }) => {
     fontWeight: "400",
     fontSize: "12px",
     height: "48px",
-    padding:"0 15px",
+    padding: "0 15px",
     alignItems: "center",
   };
   return (

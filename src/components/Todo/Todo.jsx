@@ -4,13 +4,18 @@ import { Delete } from "@mui/icons-material";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Typography from "@mui/material/Typography";
+import {ToastContainer,toast} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react";
 export const Todo = ({ text, todo, todos, setTodos }) => {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
+    toast("Tapşırıq silindi")
   };
 
   const [active, setActive] = useState(false);
+
+ 
 
   const handleClick = () => {
     setActive(!active);
@@ -47,6 +52,7 @@ export const Todo = ({ text, todo, todos, setTodos }) => {
           )}
         </IconButton>
       </div>
+       <ToastContainer/>
     </div>
   );
 };
