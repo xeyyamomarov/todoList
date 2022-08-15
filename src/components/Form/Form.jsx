@@ -24,9 +24,10 @@ export const Form = ({ inputText, setInputText, todos, setTodos }) => {
             type="text"
             placeholder="Tapşırığı daxil edin"
             className="todo-input"
+            required
           />
           <IconButton sx={{ color: "#00A3FF" }} onClick={submitTodoHandler}>
-            <AddBoxIcon sx={{fontSize:"40px"}}/>
+            <AddBoxIcon  sx={{fontSize:"40px"}}/>
           </IconButton>
         </div>
       </form>
