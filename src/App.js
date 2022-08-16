@@ -19,7 +19,7 @@ function App() {
       <header>
         <h1>TODO</h1>
       </header>
-      <div className="a">
+      <div className="todo-form">
       <Form
         todos={todos}
         setTodos={setTodos}

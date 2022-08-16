@@ -1,17 +1,23 @@
 import { Todo } from "../Todo/Todo";
+import { Typography } from "@mui/material";
 export const TodoList = ({ todos, setTodos, clearTodos }) => {
   const count = {
     width: "579px",
     display: "flex",
     justifyContent: "space-between",
     color: "#858585",
-    cursor: "pointer",
-    fontWeight: "400",
-    fontSize: "12px",
     height: "48px",
     padding: "0 15px",
     alignItems: "center",
   };
+
+  const typography={
+    fontSize:"12px",
+    fontWeight:"400",
+    cursor:"pointer",
+    fontFamily:"Exo 2",
+  }
+
   return (
     <div className="todo-container">
       <div className="todo-list">
@@ -27,10 +33,10 @@ export const TodoList = ({ todos, setTodos, clearTodos }) => {
           ))}
         </ul>
         <div style={count}>
-          <span>
+          <Typography style={typography}>
             Ümumi:{todos.filter((todo) => !todo.complete).length} tapşırıq
-          </span>
-          <span onClick={clearTodos}>Hamısını sil</span>
+          </Typography>
+          <Typography style={typography} onClick={clearTodos}>Hamısını sil</Typography>
         </div>
       </div>
     </div>

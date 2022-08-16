@@ -2,10 +2,9 @@
   width: 579px;
   display: flex;
   flex-direction: column;
-  margin-top: 10px; 
-  border-bottom: 1px solid #E0E0E0;
+  margin-top: 10px;
+  border-bottom: 1px solid #e0e0e0;
 }
-
 
 .form {
   border-radius: 10px 10px 0px 0px;
@@ -29,9 +28,14 @@ li {
   width: 579px;
   margin-top: 40px;
   background: #ffffff;
-  border-radius: 10px 10px 0px 0px; 
-  /* position: relative;
-  bottom: 150px;
-  right: 90px; */
- }
-
+  border-radius: 10px;
+}
+.todo-list ul {
+  border-radius: 10px;
+}
+.form-list {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
