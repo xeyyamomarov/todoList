@@ -13,12 +13,6 @@
   align-items: center;
   justify-content: space-between;
 }
-li {
-  list-style-type: none;
-  font-size: 16px;
-  font-weight: 400;
-  color: #414141;
-}
 .completed {
   text-decoration: line-through;
   color: #b4b4b4;
@@ -29,6 +23,25 @@ li {
   margin-top: 40px;
   background: #ffffff;
   border-radius: 10px;
+}
+.data{
+  height: 339px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.data img{
+  height: 200px;
+  width: 200px;
+}
+
+.data p{
+  font-size: 18px;
+  color: #858585;
+  font-weight: 500;
+  line-height: 21.6px;
+  font-family: "Exo 2";
 }
 .todo-list ul {
   border-radius: 10px;
