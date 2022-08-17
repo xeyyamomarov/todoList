@@ -11,12 +11,12 @@ export const TodoList = ({ todos, setTodos, clearTodos }) => {
     alignItems: "center",
   };
 
-  const typography={
-    fontSize:"12px",
-    fontWeight:"400",
-    cursor:"pointer",
-    fontFamily:"Exo 2",
-  }
+  const typography = {
+    fontSize: "12px",
+    fontWeight: "400",
+    cursor: "pointer",
+    fontFamily: "Exo 2",
+  };
 
   return (
     <div className="todo-container">
@@ -36,7 +36,12 @@ export const TodoList = ({ todos, setTodos, clearTodos }) => {
           <Typography style={typography}>
             Ümumi:{todos.filter((todo) => !todo.complete).length} tapşırıq
           </Typography>
-          <Typography style={typography} onClick={clearTodos}>Hamısını sil</Typography>
+          <Typography style={typography}>
+            Hazır:{todos.filter((item) => item.status).length} tapşırıq
+          </Typography>
+          <Typography style={typography} onClick={clearTodos}>
+            Hamısını sil
+          </Typography>
         </div>
       </div>
     </div>

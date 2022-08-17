@@ -7,7 +7,9 @@ import Typography from "@mui/material/Typography";
 import {  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+
 export const Todo = ({ text, todo, todos, setTodos }) => {
+
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
     toast("Tapşırıq silindi");
@@ -23,6 +25,7 @@ export const Todo = ({ text, todo, todos, setTodos }) => {
           return {
             ...item,
             completed: !item.completed,
+            status:!item.status,
           };
         }
         return item;
