@@ -47,9 +47,9 @@ export const Form = ({ inputText, setInputText, todos, setTodos }) => {
             className="todo-input"
             ref={todoRef}
           />
-          <span className="clear-btn">
+          <div className="clear-btn">
           <button onClick={clearInput}>X</button>
-          </span>
+          </div>
           <IconButton sx={{ color: "#00A3FF" }} onClick={submitTodoHandler}>
             <AddBoxIcon sx={{ fontSize: "40px" }} />
           </IconButton>

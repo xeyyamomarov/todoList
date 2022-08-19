@@ -53,6 +53,6 @@
   padding-left: 10px;
 }
 .form-list span{
-  position: relative;
-  left: 460px;
+  position: absolute;
+  left: 500px;
 }
