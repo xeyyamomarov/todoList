@@ -7,16 +7,24 @@ import Typography from "@mui/material/Typography";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+
 export const Todo = ({ text, todo, todos, setTodos }) => {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
     toast("Tapşırıq silindi");
   };
 
-  const [active, setActive] = useState(false);
+  const [isShown, setIsShown] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsShown(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsShown(false);
+  };
 
   const handleClick = () => {
-    setActive(!active);
     setTodos(
       todos.map((item) => {
         if (item.id === todo.id) {
@@ -30,16 +38,21 @@ export const Todo = ({ text, todo, todos, setTodos }) => {
       })
     );
   };
+
   return (
     <div className="todo">
       <div className="form">
-        <div className="form-list">
+        <div
+          className="form-list"
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+        >
           <IconButton
             sx={{ color: "#00D1FF" }}
             onClick={handleClick}
             className="complete-btn"
           >
-            {active ? <CheckCircleIcon /> : <RadioButtonUncheckedIcon />}
+            {todo.status ? <CheckCircleIcon /> : <RadioButtonUncheckedIcon />}
           </IconButton>
           <Typography
             sx={{ fontFamily: "Exo 2" }}
@@ -47,14 +60,14 @@ export const Todo = ({ text, todo, todos, setTodos }) => {
           >
             {text}
           </Typography>
+          <span>
+            {isShown && (
+              <IconButton onClick={deleteHandler}>
+                <Delete sx={{ color: "#FF542F" }} />
+              </IconButton>
+            )}
+          </span>
         </div>
-        <IconButton onClick={deleteHandler}>
-          {active ? (
-            <Delete sx={{ color: "#FF542F", background: "white" }} />
-          ) : (
-            <Delete sx={{ display: "none" }} />
-          )}
-        </IconButton>
       </div>
     </div>
   );

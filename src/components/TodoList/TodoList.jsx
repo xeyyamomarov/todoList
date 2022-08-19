@@ -36,6 +36,7 @@ export const TodoList = ({ todos, setTodos, clearTodos }) => {
                 key={todo.id}
                 todo={todo}
                 text={todo.text}
+
               />
             ))}
           </ul>:

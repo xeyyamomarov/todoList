@@ -30,3 +30,19 @@ input {
   display: flex;
   justify-content: space-between;
 }
+.clear-btn{
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+.clear-btn button{
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+.clear-btn button:hover{
+  background-color: red;
+  cursor: pointer;
+}

@@ -47,8 +47,12 @@
   border-radius: 10px;
 }
 .form-list {
-  width: 60%;
+  width: 90%;
   display: flex;
   align-items: center;
   padding-left: 10px;
+}
+.form-list span{
+  position: relative;
+  left: 460px;
 }

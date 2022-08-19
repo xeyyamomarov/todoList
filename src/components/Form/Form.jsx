@@ -4,6 +4,7 @@ import { IconButton } from "@mui/material";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRef } from "react";
+
 export const Form = ({ inputText, setInputText, todos, setTodos }) => {
   const inputHandler = (e) => {
     setInputText(e.target.value);
@@ -21,7 +22,7 @@ export const Form = ({ inputText, setInputText, todos, setTodos }) => {
       ...todos,
       {
         text: inputText,
-        status: "",
+        status:false,
         completed: false,
         id: Math.random() * 1000,
       },
@@ -31,9 +32,12 @@ export const Form = ({ inputText, setInputText, todos, setTodos }) => {
     setInputText("");
   };
 
+  const clearInput=()=>{
+    setInputText("")
+  }
+
   return (
     <div className="form">
-      <form>
         <div className="input">
           <input
             value={inputText}
@@ -43,11 +47,13 @@ export const Form = ({ inputText, setInputText, todos, setTodos }) => {
             className="todo-input"
             ref={todoRef}
           />
+          <span className="clear-btn">
+          <button onClick={clearInput}>X</button>
+          </span>
           <IconButton sx={{ color: "#00A3FF" }} onClick={submitTodoHandler}>
             <AddBoxIcon sx={{ fontSize: "40px" }} />
           </IconButton>
         </div>
-      </form>
     </div>
   );
 };
