@@ -32,9 +32,9 @@ export const Form = ({ inputText, setInputText, todos, setTodos }) => {
     setInputText("");
   };
 
-  const clearInput=()=>{
-    setInputText("")
-  }
+  // const clearInput=()=>{
+  //   setInputText("")
+  // }
 
   return (
     <div className="form">
@@ -48,7 +48,7 @@ export const Form = ({ inputText, setInputText, todos, setTodos }) => {
             ref={todoRef}
           />
           <div className="clear-btn">
-          <button onClick={clearInput}>X</button>
+          {/* <button onClick={clearInput}>X</button> */}
           </div>
           <IconButton sx={{ color: "#00A3FF" }} onClick={submitTodoHandler}>
             <AddBoxIcon sx={{ fontSize: "40px" }} />
